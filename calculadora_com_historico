@@ -1,0 +1,47 @@
+historico = []
+
+while True:
+
+    print("----escolha uma das opções abaixo----")
+    print(" 1 - soma")
+    print(" 2 - subtracao")
+    print(" 3 - multiplicacao")
+    print(" 4 - divisao")
+    print(" 5 - ver historico")
+    print(" 6 - sair")
+
+    escolha = int(input("escolha: "))
+
+    if escolha < 1 or escolha > 5:
+        print("opção invalida\n")
+        continue
+
+    num1 = int(input("digite o primeiro numero: "))
+    num2 = int(input("digite o segundo numero: "))
+
+    if escolha == 5:
+        print("\n--- HISTORICO ---")
+        for item in historico:
+            print(item)
+        print("-----------------\n")
+        continue
+
+
+    if escolha == 1:
+        operacao = f"{num1} + {num2} = {num1 + num2}"
+
+    if escolha == 2 :
+        operacao = f"{num1} - {num2} = {num1 - num2}"
+
+    if escolha == 3:
+        operacao = f"{num1} * {num2} = {num1 * num2}"
+
+    if escolha == 4:
+         operacao = f"{num1} / {num2} = {num1 / num2}"
+
+    if escolha == 6:
+        break
+
+    print(operacao)
+    historico.append(operacao)
+
